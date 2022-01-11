@@ -1,0 +1,72 @@
+@import "../sass/variables";
+
+.header{
+    .contact-info{
+        padding: 2rem 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    background: $gold;
+    
+    p{
+        font-size: 1.5rem;
+        color:rgba(139, 76, 234, 0.95);
+
+        i{
+
+padding-right: 1.2rem;
+            color: $black;
+        }
+    }
+
+}
+}
+
+
+.navbar{
+    padding: 2rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+background: $white;
+border-bottom: $border;
+
+.logo{
+@include titleText(2.5rem);
+font-weight:bolder;
+font-size: 300%;
+i{
+    color: gold;
+}
+}
+.links{
+    a{
+        margin-left: 2rem;
+        @include titleText(2rem);
+        &:hover{
+            text-decoration: underline;
+            color: rgba(140, 133, 94, 0.799);
+        }
+    }
+}
+}
+
+
+
+
+
+// header media queries 
+@media(max-width:700px){
+    .header{
+        .contact-info{
+            p{
+                font-size: x-small;
+                font-weight: bolder;
+            }
+        }
+        .navbar{
+            .logo{
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+$gold:#f6f64581;
+$white:rgba(255, 255, 255, 0.963);
+$black:#334;
+$light-color:#777;
+$light-bg:#f5f5f5f5;
+$border:.2rem solid $black;
+$box-shadow:0 .5rem  1rem rgba(0,0,0,1) ;
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color: $black;
+    
+}
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat (auto-fit,minmax($val,1fr) );
+    gap: 2rem;
+    
+}
+@mixin flex($val) {
+    display: flex;
+    grid-template-columns: repeat (auto-fit,minmax($val,1fr) );
+    gap: 2rem;
+    
+}
