@@ -1,0 +1,49 @@
+@import "../../../sass/variables";
+
+.about{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 3rem;
+    .image{
+flex: 1 1 40rem;
+
+img{
+    width: 100%;
+
+}
+    }
+    .content{
+        flex: 1 1 40rem;
+h3{
+    @include titleText(4.5rem);
+    padding-bottom: 2rem;
+}
+p{
+    @include graphText(2.5rem)
+}
+    }
+}
+
+.gallery{
+    .gallery-container{
+        @include flex(30rem);
+    
+       .box{
+           height: 25rem;
+           overflow: hidden;
+
+           &:hover img{
+               transform: scale(1.1);
+
+           }
+           img{
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
+           }
+
+       } 
+    }
+  
+}

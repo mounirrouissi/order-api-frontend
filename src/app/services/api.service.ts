@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Client } from '../models/client';
+import { Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,13 @@ export class ApiService {
 public getAllClients():Observable<Client[]>
 {
 return this.http.get<Client[]>(this.baseUrl+"clients")
+}
+
+//Produit API
+
+public getAllProducts():Observable<Product[]>
+{
+return this.http.get<Product[]>(this.baseUrl+"produits")
 }
 
 }

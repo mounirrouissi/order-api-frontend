@@ -1,7 +1,7 @@
 $gold:#f6f64581;
 $white:rgba(255, 255, 255, 0.963);
 $black:#334;
-$light-color:#777;
+$light-color:rgba(97, 58, 58, 0.854);
 $light-bg:#f5f5f5f5;
 $border:.2rem solid $black;
 $box-shadow:0 .5rem  1rem rgba(0,0,0,1) ;
@@ -13,8 +13,8 @@ $box-shadow:0 .5rem  1rem rgba(0,0,0,1) ;
     
 }
 @mixin grid($val) {
-    display: grid;
-    grid-template-columns: repeat (auto-fit,minmax($val,1fr) );
+    display: flgridex;
+    grid-template-columns: repeat (auto-fit,minmax($val,2fr) );
     gap: 2rem;
     
 }
@@ -23,4 +23,37 @@ $box-shadow:0 .5rem  1rem rgba(0,0,0,1) ;
     grid-template-columns: repeat (auto-fit,minmax($val,1fr) );
     gap: 2rem;
     
+}
+@mixin graphText($graphSize) {
+    font-size: $graphSize;
+    line-height: 2;
+    color: $light-color;
+    text-align: center;
+    
+}
+.btn{
+  
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    background: white;
+    color: black;
+    bordder:$border;
+    @include titleText(2rem);
+    border-radius: 5%;
+&:hover{
+background-color: $gold;
+border-color: $gold;
+color: $white;
+}
+}
+.heading{
+    text-align: center;
+    margin-bottom: 1rem;
+    @include titleText(4rem);
+    
+    span{
+color:$gold;
+    }
 }

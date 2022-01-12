@@ -1,1 +1,19 @@
-@import "./../../../sass/variables ";
+@import "./../../../sass/variables";
+
+.container{
+    @include flex(5);
+
+    .products{
+
+        .productNumber{
+            background-color: red;
+            @include titleText(3.5rem);
+            
+        
+        }
+        .content{
+            @include titleText(2.5rem);
+            background-color:$gold;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { Commande } from "./product";
+import { Commande } from "./commande";
 
 export interface Client {
     

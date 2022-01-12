@@ -1,14 +1,15 @@
-import { Client } from "./client";
+import { Categorie } from "./categorie";
 import { LignCommande } from "./lign-commande";
 
-export interface Commande {
-    
+export interface Product {
        id:number;
-
-      numero:string;
-      date:Date;
+      code:string;
+      marque:string;
+      modele:string;
+      caracteritique:string;
       prixUnitaire:number;
-      etat:number;
-      lignCommande:LignCommande[];
-      client:Client;
+      quantite:number;
+      categorie:Categorie;
+    lignCommandes:LignCommande[];
 }
+

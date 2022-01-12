@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HttpClientModule } from "@angular/common/http";
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     ClientsComponent,
-    ProductsComponent
+    ProductsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

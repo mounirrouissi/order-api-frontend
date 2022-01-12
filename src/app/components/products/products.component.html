@@ -1,1 +1,20 @@
-<p>products works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="heading">Our <span>Prodcuts</span></div>
+    <div class="products" *ngFor="let product of products">
+             <div class="productNumber">Product {{product.id}}</div>
+             <div class="content">
+                 <span>Product code:</span><h1 class="code">{{product.code}}</h1>
+             </div>
+</div>
+</div>
+</body>
+</html>
