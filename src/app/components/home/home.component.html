@@ -30,5 +30,26 @@
     </div>
   </section>
   <!--about sectio ends-->
+
+  <!--categories section starts-->
+  <section class="categories">
+    <div class="heading">Our <span>Categories</span></div>
+    <div class="box-container" *ngFor="let category of categories;index as i">
+      
+      <div class="box">
+        <img src="../.. /../../../assets/images/categories/sports.jfif" alt="">
+      <div class="content">
+        <i class="fa fa-info"></i>
+        <h3>{{category.libelle}}</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, laboriosam?</p>
+      </div>
+      <a href="" class="btn" routerLink="/products/{{category.id}}" >Discover</a>
+      </div>
+
+    
+
+    </div>
+  </section>
+  <!--categories section ends-->
 </body>
 </html>

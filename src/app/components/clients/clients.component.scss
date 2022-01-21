@@ -13,6 +13,15 @@
         .content{
             @include titleText(2.5rem);
             background-color:$gold;
+        a{
+            &:hover{
+                cursor: pointer;
+            }
         }
+        }
+        
+    }
+    #editModel{
+        display: none;
     }
 }

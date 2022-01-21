@@ -7,9 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
-
-
+          "style": "scss"
         },
         "@schematics/angular:application": {
           "strict": true
@@ -34,12 +32,11 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/font-awesome/scss/font-awesome.scss",
-
-
+              "node_modules/font-awesome/css/font-awesome.css" 
 
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {

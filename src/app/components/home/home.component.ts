@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Categorie } from 'src/app/models/categorie';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+categories:Categorie[]=[]
+  constructor(private apiService:ApiService) { }
 
   ngOnInit(): void {
+    this.getAllCategories()
+  }
+  getAllCategories() {
+    this.apiService.getAllCategories().subscribe(
+      res=>{this.categories=res}
+    )
   }
 
 }

@@ -7,16 +7,43 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container">
-    <div class="clients" *ngFor="let client of clients;index as i">
-             <div class="clientNumber">Client {{i+1}}</div>
+    
+
+<div class="container" id="container1">
+    <div class="clients col md-12" *ngFor="let xc of clientsList ;index as i">
+             <div class="clientNumber">Client {{i+1}}</div> 
              <div class="content">
 
-                 <span>Client code:</span><h1 class="code">{{client.code}}</h1>
-                            <span>Client Ville :</span> <h2>{{client.ville}}</h2>
+                 <span>Client code:</span><h1 class="code">{{xc.code}}</h1>
+                            <span>Client Ville :</span> <h2>{{xc.ville}}</h2>
+                            <a (click)="onOpenModal(xc)"> <i class="fa fa-pencil">Edit</i>       
+                            </a>
              </div>
-    <a href="" class="btn" routerLink="/products">Get Products</a>         
+    <a href="" class="btn" routerLink="/products">Get Products</a>  
+</div>
+
+
+
+<div class="modal fade bg-wraning w-50" id="editModal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+    
+            <div class="modal-header">
+                <h3 class="">Update Client</h3>
+                <p>Fill in the data below.</p>
+            </div>
+            <div class="modal-body">
+                <form #form="ngForm" class="requires-validation" >
+                    <div class="form-item">
+                        <label>name:</label>
+                        <input type="text" [ngModel]="updateClient.nom" name="nom"></div>
+                </form>
+            </div>
+    </div>
 </div>
 </div>
+</div>
+
+
 </body>
 </html>

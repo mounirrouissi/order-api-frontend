@@ -13,9 +13,9 @@ $box-shadow:0 .5rem  1rem rgba(0,0,0,1) ;
     
 }
 @mixin grid($val) {
-    display: flgridex;
-    grid-template-columns: repeat (auto-fit,minmax($val,2fr) );
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax($val,4fr));
+    gap: 4rem;
     
 }
 @mixin flex($val) {
@@ -45,7 +45,7 @@ $box-shadow:0 .5rem  1rem rgba(0,0,0,1) ;
 &:hover{
 background-color: $gold;
 border-color: $gold;
-color: $white;
+color: $black;
 }
 }
 .heading{
